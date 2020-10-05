@@ -1,0 +1,29 @@
+<h1>{{ title }}</h1>
+
+<app-profiler></app-profiler>
+
+<a class="btn btn-primary mb-3" (click)="changeCardNumber()">Change Card Number Input Property</a>
+<br />
+<a class="btn btn-primary mb-3" (click)="changeCardNumberTimeout()"
+  >Change Card Number Input Property with async timeout to:
+  <span id="timeout-number"></span>
+</a>
+
+<br />
+<a class="btn btn-primary mb-3" (click)="runCdr()">this.cdr.detectChanges()</a>
+
+<div class="row">
+  <div class="col-4">
+    <app-card [cardIndex]="cardNumber"></app-card>
+  </div>
+  <div class="col-4">
+    <app-card-onpush [cardIndex]="cardNumber"></app-card-onpush>
+  </div>
+</div>
+
+<a class="btn btn-primary mt-3 mb-3" (click)="colorService.updateColor()">Update Color via Service</a> <br />
+<a class="btn btn-primary mt-3 mb-3" (click)="colorService.updateColorWithChangeDetection()">
+  Update Color via Service + detectChanges() in Card
+</a>
+
+<app-cd-counter></app-cd-counter>

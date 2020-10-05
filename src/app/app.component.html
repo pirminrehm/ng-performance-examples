@@ -1,14 +1,43 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-3">
-      <ul class="list-group">
-        <li class="list-group-item" [routerLink]="'/home'" [routerLinkActive]="'active'">Home</li>
-        <li class="list-group-item" [routerLink]="'/default'" [routerLinkActive]="'active'">Default</li>
-        <li class="list-group-item" [routerLink]="'/onpush'" [routerLinkActive]="'active'">OnPush</li>
-        <li class="list-group-item" [routerLink]="'/onpush-fixed'" [routerLinkActive]="'active'">OnPush fixed</li>
-      </ul>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" [routerLink]="'/home'" [routerLinkActive]="'active'"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="list-group-item list-group-item-action"
+          [routerLink]="'/counter'"
+          [routerLinkActive]="'active'"
+          >Change Detection Counter</a
+        >
+        <a
+          href="#"
+          class="list-group-item list-group-item-action"
+          [routerLink]="'/default'"
+          [routerLinkActive]="'active'"
+          >Change Detection Default</a
+        >
+        <a
+          href="#"
+          class="list-group-item list-group-item-action"
+          [routerLink]="'/onpush'"
+          [routerLinkActive]="'active'"
+          >Change Detection OnPush</a
+        >
+        <a
+          href="#"
+          class="list-group-item list-group-item-action"
+          [routerLink]="'/onpush-problems'"
+          [routerLinkActive]="'active'"
+          >Change Detection OnPush Problems</a
+        >
+      </div>
+
+      <a class="btn btn-primary mt-5" (click)="runCdr()">this.cdr.detectChanges() on AppComonent</a>
     </div>
-    <div class="col-9">
+    <div class="col-9 router-content">
       <router-outlet></router-outlet>
     </div>
   </div>

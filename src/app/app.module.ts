@@ -1,13 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { CdsDefaultComponent } from './cds-default/cds-default.component';
-import { CdsOnpushComponent } from './cds-onpush/cds-onpush.component';
-import { CdsOnpushFixedComponent } from './cds-onpush-fixed/cds-onpush-fixed.component';
-import { ReuseComponent } from './reuse/reuse.component';
+import { CdsOnpushProblemsComponent } from './pages/cds-onpush-problems/cds-onpush-problems.component';
+import { CardOnpushComponent } from './components/card-onpush/card-onpush.component';
+import { CounterPageComponent } from './pages/counter-page/counter-page.component';
+import { CardComponent } from './components/card/card.component';
+import { CdCounterComponent } from './components/cd-counter/cd-counter.component';
+import { ProfilerComponent } from './components/profiler/profiler.component';
+import { CdsDefaultComponent } from './pages/cds-default/cds-default.component';
+import { CdsOnpushComponent } from './pages/cds-onpush/cds-onpush.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +20,14 @@ import { ReuseComponent } from './reuse/reuse.component';
     HomeComponent,
     CdsDefaultComponent,
     CdsOnpushComponent,
-    CdsOnpushFixedComponent,
-    ReuseComponent,
+    CardComponent,
+    CardOnpushComponent,
+    ProfilerComponent,
+    CdCounterComponent,
+    CdsOnpushProblemsComponent,
+    CounterPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

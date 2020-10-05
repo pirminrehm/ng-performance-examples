@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cds-default.component.scss'],
 })
 export class CdsDefaultComponent implements OnInit {
+  cardIndexes = [];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.addCards();
+  }
+
+  addCards(): void {
+    this.cardIndexes.push(...new Array(1000).fill(undefined).map((v, i) => i + this.cardIndexes.length));
+  }
 }

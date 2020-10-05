@@ -1,0 +1,17 @@
+<h1>Angular OnPush Change Detection Strategy</h1>
+<h2>with 1000 cards</h2>
+
+<app-profiler></app-profiler>
+
+<div class="row mb-3">
+  <div class="col-3">
+    <a class="btn btn-primary" (click)="addCards()">Add 1000 Cards</a>
+  </div>
+
+  <div class="col-3 nr-cards">Number of cards: {{ cardIndexes.length }}</div>
+</div>
+<div class="row">
+  <div class="col-3" *ngFor="let index of cardIndexes">
+    <app-card [cardIndex]="index"></app-card>
+  </div>
+</div>

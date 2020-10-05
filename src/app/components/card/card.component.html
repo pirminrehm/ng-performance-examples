@@ -1,0 +1,12 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title" [style.color]="colorCode">Reuse Component</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Nr. {{ cardIndex }}</h6>
+    <div class="card-text">
+      <div class="form-group">
+        <label for="headerColorInput">Header Color:</label>
+        <input type="text" id="headerColorInput" class="form-control" placeholder="green" [(ngModel)]="colorCode" />
+      </div>
+    </div>
+  </div>
+</div>

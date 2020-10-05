@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CdsOnpushComponent } from './cds-onpush.component';
+import { ProfilerComponent } from './profiler.component';
 
-describe('CdsOnpushComponent', () => {
-  let component: CdsOnpushComponent;
-  let fixture: ComponentFixture<CdsOnpushComponent>;
+describe('ProfilerComponent', () => {
+  let component: ProfilerComponent;
+  let fixture: ComponentFixture<ProfilerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CdsOnpushComponent],
-    }).compileComponents();
+      declarations: [ ProfilerComponent ]
+    })
+    .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CdsOnpushComponent);
+    fixture = TestBed.createComponent(ProfilerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
