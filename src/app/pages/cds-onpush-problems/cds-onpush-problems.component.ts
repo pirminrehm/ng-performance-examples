@@ -10,7 +10,7 @@ import { ColorService } from 'src/app/services/color.service';
 export class CdsOnpushProblemsComponent implements OnInit {
   cardNumber = getRand();
 
-  get title() {
+  get title(): string {
     console.log('title getter is called in CdsOnpushProblemsComponent');
     return 'OnPush Problems';
   }
@@ -27,10 +27,10 @@ export class CdsOnpushProblemsComponent implements OnInit {
   }
 
   changeCardNumberTimeout(): void {
-    setTimeout(() => {
+    queueMicrotask(() => {
       this.cardNumber = getRand();
       document.getElementById('timeout-number').textContent = this.cardNumber + '';
-    }, 50);
+    });
   }
 }
 
